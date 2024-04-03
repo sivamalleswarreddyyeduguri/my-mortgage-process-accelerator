@@ -1,5 +1,13 @@
 package com.zettamine.mpa.escrow.dto;
 
-public class EscrowServiceAreaDto {
+import lombok.Data;
 
+@Data
+public class EscrowServiceAreaDto {
+		
+	 private String county;
+	 private String city;
+	 private String state;
+	 private String zipcode;
+	
 }
