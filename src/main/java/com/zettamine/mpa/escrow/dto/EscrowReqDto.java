@@ -1,5 +1,10 @@
 package com.zettamine.mpa.escrow.dto;
 
-public class EscrowReqDto {
+import lombok.Data;
 
+@Data
+public class EscrowReqDto {
+	
+	private String reqName;
+	private String description;
 }

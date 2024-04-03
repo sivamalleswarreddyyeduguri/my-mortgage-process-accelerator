@@ -1,5 +1,12 @@
 package com.zettamine.mpa.escrow.dto;
 
-public class ResponseDto {
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
+@Data
+@AllArgsConstructor
+public class ResponseDto {
+		
+	private String statusCode;
+	private String statusMsg;
 }

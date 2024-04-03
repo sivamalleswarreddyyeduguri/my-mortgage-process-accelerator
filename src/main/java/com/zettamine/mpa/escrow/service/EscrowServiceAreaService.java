@@ -1,12 +1,11 @@
 package com.zettamine.mpa.escrow.service;
 
-import java.util.List;
-
 import com.zettamine.mpa.escrow.dto.EscrowServiceAreaDto;
-
+import java.util.List;
 public interface EscrowServiceAreaService {
 
-	void save(EscrowServiceAreaDto escSrvcDto);
+
+	void save(EscrowServiceAreaDto serviceAreaDto);
 	
 	EscrowServiceAreaDto findById(Integer srvcId);
 	
@@ -15,5 +14,6 @@ public interface EscrowServiceAreaService {
 	List<EscrowServiceAreaDto> findByEscoId(Integer escoId);
 	
 	boolean update(EscrowServiceAreaDto escSrvcDto);
+
 
 }
