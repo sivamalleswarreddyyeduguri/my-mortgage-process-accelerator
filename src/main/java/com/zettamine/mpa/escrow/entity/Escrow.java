@@ -12,12 +12,14 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "escrow_company")
 @AllArgsConstructor
 @NoArgsConstructor
+@Data
 public class Escrow extends BaseEntity {
 	
 	@Id
