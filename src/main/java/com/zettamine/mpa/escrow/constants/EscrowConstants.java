@@ -13,6 +13,7 @@ public interface EscrowConstants {
 		String INVALID_EMAIL = "Please provide valid email id";
 		String INVALID_ACCOUNT_NUMBER = "Please provide valid valid account number  12-16 characters required";
 		String INVALID_ESC_LIENCE_ID = "Please provide valid escrow lienece number";
+		String NOT_NULL = "Please provide escrow name";
 		
 		//validation constants
 		String PHONE_REGEX = "^\\(?(\\d{3})\\)?[- ]?(\\d{3})[- ]?(\\d{4})$";

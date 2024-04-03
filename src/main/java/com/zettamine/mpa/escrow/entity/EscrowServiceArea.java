@@ -8,6 +8,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
@@ -22,9 +23,16 @@ public class EscrowServiceArea extends BaseEntity {
 	 @Column(name = "service_area_id")
 	 private Integer serviceAreaId;
 	 
+	 @NotBlank(message = "*Required")
 	 private String county;
+	 
+	 @NotBlank(message = "*Required")
 	 private String city;
+	 
+	 @NotBlank(message = "*Required")
 	 private String state;
+	 
+	 @NotBlank(message = "*Required")
 	 private String zipcode;
 	 
 	 @ManyToOne
