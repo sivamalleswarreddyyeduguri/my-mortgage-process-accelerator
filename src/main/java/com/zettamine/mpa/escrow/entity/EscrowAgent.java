@@ -24,42 +24,31 @@ public class EscrowAgent extends BaseEntity {
 	@Column(name = "escrow_agent_id")
 	private Integer escrowAgentId;
 	 
-	@NotBlank(message = "*Required")
-	@Column(name = "escrow_licence_id", unique = true)
-	
-	@NotBlank(message = "*Required")
+	@Column(name = "escrow_licence_id", unique = true, nullable = false )
 	private String escrowLicenceId;
 	
-	@NotBlank(message = "*Required")
-	@Column(name = "first_name")
+	@Column(name = "first_name", nullable = false )
 	private String firstName;
 	
-	@NotBlank(message = "*Required")
-	@Column(name = "last_name")
+	@Column(name = "last_name", nullable = false )
 	private String lastName;
 	
-	@NotBlank(message = "*Required")
-	@Column(unique = true)
+	@Column(unique = true, nullable = false )
 	private String email;
 	
-	@NotBlank(message = "*Required")
-	@Column(unique = true)
+	@Column(unique = true, nullable = false )
 	private String phone;
 	
-	@NotNull(message = "*Required")
-	@Column(name = "avg_tx_vol")
+	@Column(name = "avg_tx_vol", nullable = false )
 	private Integer avgTxVol;
 	
-	@NotNull(message = "*Required")
-	@Column(name = "tx_success_rate")
+	@Column(name = "tx_success_rate", nullable = false )
 	private Float txSuccessRate;
 	
-	@NotBlank(message = "*Required")
-	@Column(name = "escrow_sw")
+	@Column(name = "escrow_sw", nullable = false )
 	private String escrowSw;
 	
 	 @ManyToOne
 	 @JoinColumn(name = "esco_id")
-	 @NotNull(message = "*Required")
 	 private Escrow escrow;
 }

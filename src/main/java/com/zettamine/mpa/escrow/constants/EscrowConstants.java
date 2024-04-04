@@ -23,5 +23,8 @@ public interface EscrowConstants {
 		String ACCOUNT_NUMBER_REGEX = "^\\d{12,16}$";
 		String ESC_LINCENCE_ID_REGEX = "^[A-Za-z0-9]{5,10}$";
 		String ONLY_ALPHA_REGEX = "^[a-zA-Z]+$";
+		
+		//status codes constants
+		String STATUS_201 ="201";
 
 }

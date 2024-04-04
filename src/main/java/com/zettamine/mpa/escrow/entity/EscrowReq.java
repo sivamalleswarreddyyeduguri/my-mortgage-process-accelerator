@@ -25,7 +25,7 @@ public class EscrowReq extends BaseEntity{
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer reqId;
 	
-	@NotBlank(message = "*Required")
+	
 	@Column(name = "req_name")
 	private String reqName;
 	
