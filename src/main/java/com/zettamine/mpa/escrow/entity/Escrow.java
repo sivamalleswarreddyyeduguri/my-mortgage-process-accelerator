@@ -11,6 +11,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -28,20 +30,29 @@ public class Escrow extends BaseEntity {
 	@Column(name = "esco_id")
 	private Integer escoId;
 	
-    @Column(name = "esco_name", unique = true)
+	@NotBlank(message = "*Required")
 	private String escoName;
+	
 	private String address;
+	
 	private String city;
+	
 	private String state;
+	
 	private String zipcode;
+	
 	@Column(name = "phone", unique = true)
 	private String phone;
+	
 	@Column(name = "email", unique = true)
 	private String email;
+	
 	@Column(name = "in_escrow_ac_no", unique = true)
 	private String inEscrowAcNo;
+	
 	@Column(name = "es_ac_bank_name")
 	private String esAcBankName;
+	
 	@Column(name = "es_process_time")
 	private Integer esProcessTime;
 	

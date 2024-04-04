@@ -8,4 +8,5 @@ import com.zettamine.mpa.escrow.entity.Escrow;
 @Mapper(componentModel = "spring")
 public interface EscrowMapper {
 	Escrow toEntity(EscrowDto dto);
+	EscrowDto toEscrowDto(Escrow escrow);
 }

@@ -7,13 +7,13 @@ import com.zettamine.mpa.escrow.dto.SearchCriteria;
 
 public interface EscrowService {
 	
-	void save(EscrowDto escrowDto);
+	List<EscrowDto> getAll();
 	
 	EscrowDto findById(Integer escrowId);
 	
-	EscrowDto findByEscrowName(String escoName);
+	void save(EscrowDto escrowDto);
 	
-	List<EscrowDto> getAll();
+	EscrowDto findByEscrowName(String escoName);
 	
 	boolean update(EscrowDto escrowDto);
 	
