@@ -1,5 +1,7 @@
 package com.zettamine.mpa.escrow.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -11,12 +13,14 @@ import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "escrow_agent")
 @AllArgsConstructor
 @NoArgsConstructor
+@Data
 public class EscrowAgent extends BaseEntity {
 		
 	@Id
@@ -48,6 +52,7 @@ public class EscrowAgent extends BaseEntity {
 	@Column(name = "escrow_sw", nullable = false )
 	private String escrowSw;
 	
+	 
 	 @ManyToOne
 	 @JoinColumn(name = "esco_id")
 	 private Escrow escrow;

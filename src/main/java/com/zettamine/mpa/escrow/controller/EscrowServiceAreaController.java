@@ -4,7 +4,9 @@ import java.util.Optional;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+
 import org.springframework.validation.annotation.Validated;
+
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -42,4 +44,18 @@ public class EscrowServiceAreaController {
 				.body(new ResponseDto(EscrowConstants.STATUS_201, EscrowConstants.SAVE_SUCCEESS));
 	}
 		
+
+  import org.springframework.validation.annotation.Validated;
+  
+	 @PostMapping("/service-area/create")
+	 public ResponseEntity<ResponseDto> addServiceArea(@RequestBody EscrowServiceAreaDto serviceAreaDto){
+		 		
+		     serviceAreaService.save(serviceAreaDto);
+		     return ResponseEntity
+					   .status(HttpStatus.CREATED)
+					   .body(new ResponseDto(EscrowConstants.STATUS_201, EscrowConstants.SAVE_SUCCEESS));
+	 }
+	 
+	 
+
 }
