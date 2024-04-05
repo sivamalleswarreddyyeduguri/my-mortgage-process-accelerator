@@ -8,6 +8,8 @@ import jakarta.persistence.IdClass;
 @Entity
 @IdClass(ReqLoanCompositePrimaryKey.class)
 public class EscrowReqLoanProduct {
+	
+	
 	@Id
 	@Column(name = "req_id")
 	private Integer reqId;

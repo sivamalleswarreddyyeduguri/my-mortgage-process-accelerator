@@ -6,9 +6,13 @@ import lombok.Data;
 public class SearchCriteria {
 	
 	private Integer escrowId;
+	
 	private String name;
+	
 	private String state;
+	
 	private String city;
+	
 	private Integer zipcode;
 
 }

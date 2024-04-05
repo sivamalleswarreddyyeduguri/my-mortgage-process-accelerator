@@ -10,6 +10,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -26,22 +28,28 @@ public class EscrowAgent extends BaseEntity {
 	@Column(name = "escrow_agent_id")
 	private Integer escrowAgentId;
 	 
-	
-	@Column(name = "escrow_licence_id", unique = true)
+	@Column(name = "escrow_licence_id", unique = true, nullable = false )
 	private String escrowLicenceId;
-	@Column(name = "first_name")
+	
+	@Column(name = "first_name", nullable = false )
 	private String firstName;
-	@Column(name = "last_name")
+	
+	@Column(name = "last_name", nullable = false )
 	private String lastName;
-	@Column(unique = true)
+	
+	@Column(unique = true, nullable = false )
 	private String email;
-	@Column(unique = true)
+	
+	@Column(unique = true, nullable = false )
 	private String phone;
-	@Column(name = "avg_tx_vol")
+	
+	@Column(name = "avg_tx_vol", nullable = false )
 	private Integer avgTxVol;
-	@Column(name = "tx_success_rate")
+	
+	@Column(name = "tx_success_rate", nullable = false )
 	private Float txSuccessRate;
-	@Column(name = "escrow_sw")
+	
+	@Column(name = "escrow_sw", nullable = false )
 	private String escrowSw;
 	
 	 

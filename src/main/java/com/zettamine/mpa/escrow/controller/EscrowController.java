@@ -26,9 +26,10 @@ import lombok.AllArgsConstructor;
 @RequestMapping("/api/v1/escrow")
 public class EscrowController {
 	  
-	 EscrowService escrowService;
+	 private EscrowService escrowService;
 	 
 	 @PostMapping("/create")
+
 	    public ResponseEntity<ResponseDto> addEscrow(@Valid @RequestBody EscrowDto escrowDto) {
 	       
 	            escrowService.save(escrowDto);
@@ -79,4 +80,6 @@ public class EscrowController {
 		                     .body(new ResponseDto(EscrowConstants.STATUS_404, EscrowConstants.NOT_FOUND));
 		         }
 	 }
+	 
+	 
 }

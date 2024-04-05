@@ -71,8 +71,6 @@ public class EscrowServiceAreaServiceImpl implements EscrowServiceAreaService {
 	public boolean update(EscrowServiceAreaDto escSrvcDto) {
 		// TODO Auto-generated method stub
 		return false;
-	}
-
-	
+  }	
 			
 }

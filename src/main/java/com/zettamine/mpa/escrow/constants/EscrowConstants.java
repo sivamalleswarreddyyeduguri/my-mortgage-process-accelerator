@@ -3,6 +3,7 @@ package com.zettamine.mpa.escrow.constants;
 public interface EscrowConstants {
 	
 		//response message constants
+
 	public static final	String SAVE_SUCCEESS = "Escrow company saved successfully";
 	public static final	String SAVE_CONFLICT = "Escrow service area already exists";
 	public static final	String UPDATE_SUCCESS = "Escrow company details updated successfully";
@@ -30,5 +31,6 @@ public interface EscrowConstants {
 	public static final String STATUS_404 = "404";
 	public static final String STATUS_400 = "400";
 	public static final String STATUS_409 = "409";
+
 
 }
