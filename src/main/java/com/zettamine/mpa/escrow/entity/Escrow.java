@@ -2,6 +2,9 @@ package com.zettamine.mpa.escrow.entity;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -45,8 +48,10 @@ public class Escrow extends BaseEntity {
 	@Column(name = "es_process_time")
 	private Integer esProcessTime;
 	
+
 	@OneToMany(mappedBy = "escrow", cascade = CascadeType.ALL)
     private List<EscrowServiceArea> serviceArea;
+	
 	
 	@OneToMany(mappedBy = "escrow", cascade = CascadeType.ALL)
     private List<EscrowAgent> escrowAgent;

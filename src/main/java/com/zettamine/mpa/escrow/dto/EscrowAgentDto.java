@@ -13,6 +13,5 @@ public class EscrowAgentDto {
 	private Integer avgTxVol;
 	private Float txSuccessRate;
 	private String escrowSw;
-	
     private String escoId;
 }

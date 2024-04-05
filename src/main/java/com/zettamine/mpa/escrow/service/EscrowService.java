@@ -15,7 +15,7 @@ public interface EscrowService {
 	
 	List<EscrowDto> getAll();
 	
-	boolean update(EscrowDto escrowDto);
+	boolean update(EscrowDto escrowDto, Integer escoId);
 	
 	List<EscrowDto> search(SearchCriteria criteria); 
 	
