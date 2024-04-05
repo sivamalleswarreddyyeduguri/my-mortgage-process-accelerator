@@ -1,8 +1,14 @@
 package com.zettamine.mpa.escrow.entity;
 
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import com.zettamine.mpa.escrow.dto.EscrowDto;
 
+
 import jakarta.persistence.Column;
+import jakarta.persistence.Embeddable;
+import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,12 +18,14 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "escrow_service_area")
 @AllArgsConstructor
 @NoArgsConstructor
+@Data
 public class EscrowServiceArea extends BaseEntity {
 		
 	 @Id

@@ -38,9 +38,12 @@ public class EscrowAgentDto {
 	
 	@NotBlank(message = "*Required")
 	private String escrowSw;
+
 	
 	@NotNull(message = "*Required")
 	private String escrow;
 	
-    private String escoId;
+r
+ @NotNull(message = "*Required")
+	private String escrow;
 }
