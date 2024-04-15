@@ -7,6 +7,5 @@ import com.zettamine.mpa.escrow.entity.EscrowAgent;
 
 @Mapper(componentModel = "spring")
 public interface EscrowAgentMapper {
-      EscrowAgent toEntity(EscrowAgentDto agentDto);
-
+	
 }

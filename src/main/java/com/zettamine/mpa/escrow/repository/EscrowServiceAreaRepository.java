@@ -9,8 +9,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.zettamine.mpa.escrow.entity.EscrowServiceArea;
 
-public interface EscrowServiceAreaRepository extends JpaRepository<EscrowServiceArea, Serializable> {
+public interface EscrowServiceAreaRepository {
 	
-	public Optional<EscrowServiceArea> findByEscoIdAndZipCode(Integer escoId, String zipcode);
 
 }
