@@ -3,6 +3,7 @@ package com.zettamine.mpa.escrow.service;
 import java.util.List;
 
 import com.zettamine.mpa.escrow.dto.EscrowDto;
+import com.zettamine.mpa.escrow.dto.EscrowFetchDto;
 import com.zettamine.mpa.escrow.dto.SearchCriteria;
 
 public interface EscrowService {
@@ -17,6 +18,6 @@ public interface EscrowService {
 	
 	boolean update(EscrowDto escrowDto, Integer escoId);
 	
-	List<EscrowDto> search(SearchCriteria criteria); 
+	List<EscrowFetchDto> search(SearchCriteria criteria); 
 	
 }

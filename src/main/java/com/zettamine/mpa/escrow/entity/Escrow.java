@@ -48,7 +48,7 @@ public class Escrow extends BaseEntity {
 	@Column(name = "es_process_time")
 	private Integer esProcessTime;
 	
-
+	
 	@OneToMany(mappedBy = "escrow", cascade = CascadeType.ALL)
     private List<EscrowServiceArea> serviceArea;
 	

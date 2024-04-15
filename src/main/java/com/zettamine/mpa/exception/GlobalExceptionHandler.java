@@ -29,11 +29,11 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 		   
 		   ErrorResponseDto errorResponseDto = new ErrorResponseDto(
 				   webRequest.getDescription(false),
-	                HttpStatus.BAD_REQUEST,
+	                HttpStatus.CONFLICT,
 	                exception.getMessage(),
 	                LocalDateTime.now()
 			 );
-	        return new ResponseEntity<>(errorResponseDto, HttpStatus.BAD_REQUEST);
+	        return new ResponseEntity<>(errorResponseDto, HttpStatus.CONFLICT);
 	}
 	
 	   @ExceptionHandler(Exception.class)
@@ -93,6 +93,31 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 	        });
 	        return new ResponseEntity<>(validationErrors, HttpStatus.BAD_REQUEST);
 	    }
-	  
-
+	    
+	    @ExceptionHandler(EscrowServiceAreaAlreadyExistsException.class)
+		public ResponseEntity<ErrorResponseDto> handleEscrowServiceAreaAlreadyExistsException(
+				EscrowServiceAreaAlreadyExistsException exception, WebRequest webRequest){
+			   
+			   ErrorResponseDto errorResponseDto = new ErrorResponseDto(
+					   webRequest.getDescription(false),
+		                HttpStatus.CONFLICT,
+		                exception.getMessage(),
+		                LocalDateTime.now()
+				 );
+		        return new ResponseEntity<>(errorResponseDto, HttpStatus.CONFLICT);
+		}
+	    
+	    @ExceptionHandler(EscrowAgentAlreadyExistsException.class)
+	    public ResponseEntity<ErrorResponseDto> handleEscrowAgentAlreadyExistsException(
+	    		EscrowAgentAlreadyExistsException exception, WebRequest webRequest){
+	    	
+	    	ErrorResponseDto errorResponseDto = new ErrorResponseDto(
+	    			webRequest.getDescription(false),
+	    			HttpStatus.CONFLICT,
+	    			exception.getMessage(),
+	    			LocalDateTime.now()
+	    			);
+	    	return new ResponseEntity<>(errorResponseDto, HttpStatus.CONFLICT);
+	    }
+        
 }

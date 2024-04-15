@@ -1,0 +1,35 @@
+server:
+  port: 9040
+spring:
+  application:
+    name: escrow-company
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    password: 8639054306
+    url: jdbc:postgresql://localhost:5432/mortgage_process_accelerator?currentSchema=mpa
+    username: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  config:
+    import: "optional:configserver:http://localhost:8888/"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    
+info:
+  app:
+    name: "escrow"
+    description: "Zetta Bank escrow module of mpa Application"
+    version: "1.0.0"

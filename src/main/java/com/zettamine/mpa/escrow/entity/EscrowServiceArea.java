@@ -1,10 +1,6 @@
 package com.zettamine.mpa.escrow.entity;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-
 import jakarta.persistence.Column;
-import jakarta.persistence.Embeddable;
-import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -33,7 +29,8 @@ public class EscrowServiceArea extends BaseEntity {
 	 private String state;
 	 private String zipcode;
 	 
+	 
 	 @ManyToOne
-	 @JoinColumn(name = "esco_id")
+	 @JoinColumn(name = "esco_id",updatable = false)
 	 private Escrow escrow;
 }

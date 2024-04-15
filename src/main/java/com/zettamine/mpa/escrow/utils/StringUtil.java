@@ -29,11 +29,11 @@ public class StringUtil {
     public static Escrow escrowRemoveSpaces(Escrow escrow) {
     	    
     	    if(escrow != null) {
-    	    	 escrow.setAddress(StringUtil.removeExtraSpaces(escrow.getAddress().toUpperCase()));
-    	    	 escrow.setEsAcBankName(StringUtil.removeExtraSpaces(escrow.getEsAcBankName().toUpperCase()));
-    	    	 escrow.setState(StringUtil.removeExtraSpaces(escrow.getState().toUpperCase()));
-    	    	 escrow.setCity(StringUtil.removeExtraSpaces(escrow.getCity().toLowerCase()));
-    	    	 escrow.setEscoName(StringUtil.removeExtraSpaces(escrow.getEscoName().toUpperCase()));
+    	    	 escrow.setAddress(removeExtraSpaces(escrow.getAddress().toUpperCase()));
+    	    	 escrow.setEsAcBankName(removeExtraSpaces(escrow.getEsAcBankName().toUpperCase()));
+    	    	 escrow.setState(removeExtraSpaces(escrow.getState().toUpperCase()));
+    	    	 escrow.setCity(removeExtraSpaces(escrow.getCity().toUpperCase()));
+    	    	 escrow.setEscoName(removeExtraSpaces(escrow.getEscoName().toUpperCase()));
     	    	  
     	    	 return escrow;
     	    }
@@ -42,9 +42,9 @@ public class StringUtil {
     
     public static EscrowServiceArea escrowServiceAreaRemoveSpaces(EscrowServiceArea serviceArea) {
     	            if(serviceArea != null) {
-    	       serviceArea.setCity(StringUtil.removeAllSpaces(serviceArea.getCity().toLowerCase()));
-    	       serviceArea.setState(StringUtil.removeAllSpaces(serviceArea.getState().toUpperCase()));
-    	       serviceArea.setCounty(StringUtil.removeExtraSpaces(serviceArea.getCounty().toUpperCase()));
+    	       serviceArea.setCity(removeExtraSpaces(serviceArea.getCity().toUpperCase()));
+    	       serviceArea.setState(removeExtraSpaces(serviceArea.getState().toUpperCase()));
+    	       serviceArea.setCounty(removeExtraSpaces(serviceArea.getCounty().toUpperCase()));
                
     	       return serviceArea;
     	  }
@@ -54,9 +54,10 @@ public class StringUtil {
     public static EscrowAgent escrowAgentRemoveSpaces(EscrowAgent escrowAgent) {
     	       
     	         if(escrowAgent != null) {
-    		   escrowAgent.setLastName(StringUtil.removeAllSpaces(escrowAgent.getLastName().toUpperCase()));
-    		   escrowAgent.setFirstName(StringUtil.removeAllSpaces(escrowAgent.getFirstName().toLowerCase()));
-    		   escrowAgent.setEscrowSw(StringUtil.removeAllSpaces(escrowAgent.getEscrowSw().toUpperCase()));
+    		   escrowAgent.setLastName(removeAllSpaces(escrowAgent.getLastName().toUpperCase()));
+    		   escrowAgent.setFirstName(removeAllSpaces(escrowAgent.getFirstName().toUpperCase()));
+    		   escrowAgent.setEscrowSw(removeAllSpaces(escrowAgent.getEscrowSw().toUpperCase()));
+    		   escrowAgent.setEscrowAgentLicenceId(removeAllSpaces(escrowAgent.getEscrowAgentLicenceId().toUpperCase()));
     		   
     		   return escrowAgent;
     		   

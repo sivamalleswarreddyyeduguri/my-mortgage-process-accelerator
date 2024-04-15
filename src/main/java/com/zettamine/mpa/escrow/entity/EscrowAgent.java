@@ -1,7 +1,5 @@
 package com.zettamine.mpa.escrow.entity;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -28,7 +26,7 @@ public class EscrowAgent extends BaseEntity {
 	 
 	
 	@Column(name = "escrow_licence_id", unique = true)
-	private String escrowLicenceId;
+	private String escrowAgentLicenceId;
 	@Column(name = "first_name")
 	private String firstName;
 	@Column(name = "last_name")
@@ -46,6 +44,6 @@ public class EscrowAgent extends BaseEntity {
 	
 	 
 	 @ManyToOne
-	 @JoinColumn(name = "esco_id")
+	 @JoinColumn(name = "esco_id", updatable = false)
 	 private Escrow escrow;
 }
